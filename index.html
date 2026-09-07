@@ -1,0 +1,180 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="color-scheme" content="dark">
+<title>Política de Privacidad · SSOF OCC · Operaciones</title>
+<meta name="description" content="Política de Privacidad de la extensión SSOF OCC · Operaciones.">
+<style>
+:root {
+  --bg:#07090b;
+  --panel:#0d1115;
+  --line:#232a31;
+  --text:#f4f7fa;
+  --muted:#a7b0ba;
+  --accent:#f5bf2f;
+  --cyan:#45d9ff;
+  --max:900px;
+}
+*{box-sizing:border-box}
+body{
+  margin:0;background:var(--bg);color:var(--text);
+  font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
+  line-height:1.68;
+}
+header{
+  border-bottom:1px solid var(--line);
+  background:linear-gradient(180deg,#0d1115 0%,#080a0d 100%);
+}
+.wrap{max-width:var(--max);margin:0 auto;padding:0 28px}
+.hero{padding:58px 0 46px}
+.eyebrow{
+  font:700 12px/1.2 ui-monospace,SFMono-Regular,Menlo,monospace;
+  letter-spacing:.14em;color:var(--cyan);text-transform:uppercase;
+}
+h1{font-size:clamp(34px,6vw,58px);line-height:1.02;margin:16px 0 18px;letter-spacing:-.035em}
+.lead{max-width:720px;color:#cbd2d9;font-size:18px}
+.meta{margin-top:24px;color:var(--muted);font-size:14px}
+main{padding:38px 0 70px}
+section{
+  padding:26px 0;border-bottom:1px solid var(--line);
+}
+section:last-child{border-bottom:0}
+h2{font-size:22px;margin:0 0 12px;letter-spacing:-.015em}
+h3{font-size:17px;margin:22px 0 8px;color:#e8edf2}
+p,li{color:#c8d0d8}
+ul{padding-left:22px}
+strong{color:#fff}
+.badge{
+  display:inline-block;padding:6px 10px;border:1px solid #5b4920;
+  border-radius:999px;color:#ffd766;background:#171307;font-size:12px;font-weight:700;
+}
+.note{
+  margin:18px 0;padding:16px 18px;border:1px solid #26343c;border-left:3px solid var(--cyan);
+  border-radius:8px;background:#0a1116;color:#d8e4ea;
+}
+footer{border-top:1px solid var(--line);padding:30px 0 46px;color:var(--muted);font-size:13px}
+a{color:var(--cyan)}
+@media (max-width:600px){.wrap{padding:0 19px}.hero{padding-top:40px}}
+</style>
+</head>
+<body>
+<header>
+  <div class="wrap hero">
+    <div class="eyebrow">SSOF · OCC · OPERACIONES</div>
+    <h1>Política de Privacidad</h1>
+    <p class="lead">Información sobre el tratamiento de datos de la extensión de Chrome SSOF OCC · Operaciones.</p>
+    <p class="meta"><span class="badge">Uso interno autorizado</span> &nbsp; Fecha de entrada en vigor: 7 de septiembre de 2026</p>
+  </div>
+</header>
+<main class="wrap">
+  <section>
+    <h2>1. Ámbito y responsable</h2>
+    <p>Esta Política de Privacidad describe cómo la extensión de Chrome <strong>SSOF OCC · Operaciones</strong> trata la información necesaria para proporcionar acceso autenticado y autorizado a sus funciones operativas ferroviarias.</p>
+    <p>La extensión está destinada exclusivamente a usuarios autorizados. Para consultas relacionadas con privacidad o ejercicio de derechos, el usuario puede utilizar el correo de contacto del desarrollador publicado en la ficha oficial de SSOF OCC · Operaciones en Chrome Web Store.</p>
+  </section>
+
+  <section>
+    <h2>2. Finalidad del tratamiento</h2>
+    <p>SSOF OCC · Operaciones utiliza los datos únicamente para:</p>
+    <ul>
+      <li>autenticar al usuario;</li>
+      <li>verificar si dispone de autorización operativa;</li>
+      <li>mantener de forma segura una sesión autenticada;</li>
+      <li>rosterizar y gestionar trenes dentro del flujo operativo SSOF;</li>
+      <li>consultar y procesar información ferroviaria de GTrenes/ADIF necesaria para la interfaz H24/OCC;</li>
+      <li>bloquear o permitir el uso según el estado de autorización asignado por SSOF Identity.</li>
+    </ul>
+    <div class="note">Los datos no se utilizan para publicidad, marketing, perfilado comercial, evaluación crediticia ni finalidades ajenas a la operación ferroviaria de SSOF.</div>
+  </section>
+
+  <section>
+    <h2>3. Categorías de datos tratadas</h2>
+    <h3>3.1 Información de identificación personal</h3>
+    <p>SSOF trata la dirección de correo electrónico utilizada para identificar la cuenta del usuario y asociarla con su autorización operativa.</p>
+
+    <h3>3.2 Información de autenticación</h3>
+    <p>La extensión permite al usuario introducir sus credenciales para autenticarse mediante <strong>Firebase Authentication</strong>.</p>
+    <p>SSOF no almacena la contraseña del usuario en texto plano. La contraseña se transmite al servicio de autenticación únicamente cuando es necesaria para iniciar sesión. Tras una autenticación válida, la extensión gestiona los tokens de sesión necesarios para mantener la sesión y renovarla de forma segura.</p>
+
+    <h3>3.3 Información operativa procedente de GTrenes/ADIF</h3>
+    <p>Cuando el usuario está autorizado, SSOF puede consultar y procesar información ferroviaria mostrada o devuelta por GTrenes/ADIF necesaria para la identificación y rosterización de trenes, estado operativo, estaciones y recorrido, horarios, tiempos, retrasos, adelantos y otros datos necesarios para H24/OCC.</p>
+    <p>SSOF no utiliza este acceso para recopilar el historial general de navegación del usuario.</p>
+  </section>
+
+  <section>
+    <h2>4. Autenticación y autorización</h2>
+    <p>La identidad del usuario se autentica mediante Firebase Authentication. El derecho de uso de SSOF se decide de forma independiente mediante el backend <strong>SSOF Identity</strong>.</p>
+    <ul>
+      <li><strong>ACTIVE:</strong> acceso permitido.</li>
+      <li><strong>PENDING:</strong> acceso pendiente.</li>
+      <li><strong>SUSPENDED:</strong> acceso suspendido.</li>
+      <li><strong>REVOKED:</strong> acceso revocado.</li>
+    </ul>
+    <p>La existencia de una cuenta autenticada no garantiza por sí sola el derecho de uso de SSOF.</p>
+  </section>
+
+  <section>
+    <h2>5. Almacenamiento local y sesión</h2>
+    <p>La extensión utiliza almacenamiento propio de Chrome para conservar únicamente la información necesaria para su funcionamiento, incluyendo estado operativo local, datos ROSTER y datos de sesión.</p>
+    <p>Los tokens de autenticación se gestionan dentro del contexto protegido de la extensión. No se utilizan cookies publicitarias ni mecanismos de seguimiento comercial.</p>
+  </section>
+
+  <section>
+    <h2>6. Servicios y proveedores técnicos</h2>
+    <p>SSOF utiliza servicios técnicos de Google/Firebase para prestar su funcionalidad:</p>
+    <ul>
+      <li><strong>Firebase Authentication / Identity Toolkit</strong>, para autenticar usuarios;</li>
+      <li><strong>Secure Token Service</strong>, para renovar sesiones autenticadas;</li>
+      <li><strong>Cloud Functions</strong>, para consultar SSOF Identity y determinar el estado de autorización.</li>
+    </ul>
+    <p>La extensión también interactúa con el servicio corporativo GTrenes/ADIF cuando el usuario dispone de una sesión válida y está autorizado para operar.</p>
+  </section>
+
+  <section>
+    <h2>7. Código remoto</h2>
+    <p>SSOF OCC · Operaciones no descarga ni ejecuta JavaScript o WebAssembly remoto.</p>
+    <p>Todo el código ejecutable está incluido en el paquete distribuido a través de Chrome Web Store. Las comunicaciones HTTPS con Firebase, Cloud Functions y GTrenes/ADIF son intercambios de datos con servicios backend y no implican la descarga de código ejecutable remoto.</p>
+  </section>
+
+  <section>
+    <h2>8. Compartición y venta de datos</h2>
+    <ul>
+      <li>SSOF no vende datos de usuario.</li>
+      <li>No utiliza datos para publicidad personalizada.</li>
+      <li>No transfiere datos para finalidades ajenas a la finalidad única de la extensión.</li>
+      <li>No utiliza datos para determinar solvencia, situación crediticia ni ofrecer préstamos.</li>
+      <li>No crea perfiles comerciales de los usuarios.</li>
+    </ul>
+    <p>Los datos solo se comunican a los proveedores técnicos necesarios para autenticación, autorización y funcionamiento operativo, en la medida necesaria para prestar el servicio.</p>
+  </section>
+
+  <section>
+    <h2>9. Retención</h2>
+    <p>Los datos almacenados localmente por la extensión se mantienen únicamente mientras sean necesarios para proporcionar la funcionalidad operativa o conservar una sesión válida. El cierre de sesión elimina la sesión operativa local correspondiente.</p>
+    <p>La información de autorización administrada por SSOF Identity puede mantenerse mientras la cuenta exista y sea necesaria para gestionar el derecho de acceso, auditoría y seguridad del sistema.</p>
+  </section>
+
+  <section>
+    <h2>10. Seguridad</h2>
+    <p>SSOF aplica un modelo de acceso <strong>fail closed</strong>: si no es posible confirmar una autorización válida, la funcionalidad operativa permanece bloqueada.</p>
+    <p>La autorización se verifica mediante backend y no depende de una lista de usuarios incluida en la extensión. PENDING, SUSPENDED y REVOKED bloquean el acceso operativo. Una revocación confirmada interrumpe el derecho de uso aunque la sesión de autenticación continúe existiendo.</p>
+  </section>
+
+  <section>
+    <h2>11. Derechos y consultas</h2>
+    <p>Para cualquier consulta sobre privacidad, acceso, rectificación o eliminación de información asociada a la cuenta SSOF, el usuario puede dirigirse al desarrollador mediante la información de contacto publicada en la ficha oficial de <strong>SSOF OCC · Operaciones</strong> en Chrome Web Store.</p>
+    <p>Las solicitudes se gestionarán conforme a la normativa aplicable y a las obligaciones de seguridad y conservación que correspondan.</p>
+  </section>
+
+  <section>
+    <h2>12. Cambios en esta política</h2>
+    <p>Esta Política de Privacidad puede actualizarse cuando cambien las funciones, los proveedores técnicos o los requisitos legales y de Chrome Web Store. La versión vigente estará disponible permanentemente en la URL de Política de Privacidad indicada en la ficha de Chrome Web Store.</p>
+  </section>
+</main>
+<footer>
+  <div class="wrap"><strong>SSOF OCC · Operaciones</strong> · Política de Privacidad · 7 de septiembre de 2026</div>
+</footer>
+</body>
+</html>
